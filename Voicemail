@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .audio-player {
+            margin-top: 100px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        audio {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="audio-player">
+        <h1>Play Voicemail</h1>
+        <audio id="audioPlayer" controls>
+            <source src="Voicemail.m4a" type="audio/mp4">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+    <script>
+        const audioPlayer = document.getElementById('audioPlayer');
+        audioPlayer.addEventListener('play', () => {
+            console.log("Audio is now playing.");
+        });
+
+        audioPlayer.addEventListener('pause', () => {
+            console.log("Audio has been paused.");
+        });
+    </script>
+</body>
+</html>
